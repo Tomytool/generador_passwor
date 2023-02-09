@@ -3,6 +3,8 @@ const checkLetras = document.getElementById('letras');
 const checkNumeros = document.getElementById('numeros');
 const checkSignos = document.getElementById('signos');
 const botonGenerar = document.getElementById('generar');
+const ingCaracter = document.getElementById('ingCaracter');
+const textoPasswor=document.getElementById('textoPasswor');
 
 let objetoPasswor = [];
 let caracterPasswor = 0;
@@ -85,22 +87,26 @@ const opcionSignos = () => {
 
 const cargar = () => {
   cantidadCaracteres = Number(numeroCaracteres.value);
-  console.log(numeroCaracteres.value);
+  ingCaracter.innerText = cantidadCaracteres;
+
+  // console.log(numeroCaracteres.value);
 };
 
 const randonPasswor = () => {
   let passwor = [];
-  console.log(objetoPasswor.length);
-  console.log(cantidadCaracteres);
+  // console.log(objetoPasswor.length);
+  // console.log(cantidadCaracteres);
   if (objetoPasswor.length > 0) {
-    for (let i = 1; i < cantidadCaracteres; i++) {
+    for (let i = 1; i <= cantidadCaracteres; i++) {
       let cantidad = Math.floor(
         Math.random() * (objetoPasswor.length - 1 + 1) + 1
       );
       //   console.log(cantidad);
       passwor.push(objetoPasswor[cantidad]);
     }
+    textoPasswor.value=passwor.join('')
     console.log(passwor.join(''));
+
     // console.log(passwor);
 
     // console.log(objetoPasswor);
