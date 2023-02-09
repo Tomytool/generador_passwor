@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generador Passwor</title>
+  </head>
+  <body>
+    <h1>Generador de Passwor</h1>
+    <form action="">
+      <div class="contador"></div>
+      <input
+        type="range"
+        name="caracteres"
+        id="caracteres"
+        min="1"
+        max="10"
+        step="1"
+        value="1"
+      />
+      <label for="letras"
+        >Letras
+        <input type="checkbox" name="letras" id="letras" />
+      </label>
+      <label for="numeros"
+        >Numeros
+        <input type="checkbox" name="numeros" id="numeros" />
+      </label>
+      <label for="signos"
+        >Signos
+        <input type="checkbox" name="signos" id="signos" />
+      </label>
+    </form>
+    <button id="generar">Generar</button>
+
+    <script src="app.js"></script>
+  </body>
+</html>
